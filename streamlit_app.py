@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+api_key = os.environ["GROQ_API_KEY"]
+
 # App title
 st.set_page_config(page_title="Groq LPU™ Chatbot")
 
@@ -52,7 +54,7 @@ if selected == "Mixtral-8x7b-32768":
             else:
                 string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
         client = Groq(
-            api_key=os.environ.get("GROQ_API_KEY"),
+            api_key=api_key,
         )
 
         chat_completion = client.chat.completions.create(
@@ -113,7 +115,7 @@ elif selected == "Gemma-7b-It":
             else:
                 string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
         client = Groq(
-            api_key=os.environ.get("GROQ_API_KEY"),
+            api_key=api_key,
         )
 
         chat_completion = client.chat.completions.create(
@@ -174,7 +176,7 @@ elif selected == "Llama2-70b-4096":
             else:
                 string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
         client = Groq(
-            api_key=os.environ.get("GROQ_API_KEY"),
+            api_key=api_key,
         )
 
         chat_completion = client.chat.completions.create(
