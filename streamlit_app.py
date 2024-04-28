@@ -14,7 +14,7 @@ st.set_page_config(page_title="Groq LPU™ Chatbot")
 with st.sidebar:
     st.title('10x faster than Gemini, 18x faster than ChatGPT')
     selected = st.selectbox("Select Model",
-                            ["Gemma-7b-It", "Llama2-70b-4096", 
+                            ["Gemma-7b-It", "Llama3-8b-8192", 
                              "Mixtral-8x7b-32768"],
                              index=0)
     st.text(' ')
@@ -151,7 +151,7 @@ elif selected == "Gemma-7b-It":
         st.session_state.messages.append(message)
 
 elif selected == "Llama2-70b-4096":
-    st.write("👉Powered by Llama2-70b-4096.")
+    st.write("👉Powered by Llama3-8b-8192.")
 
     # Store LLM generated responses
     if "messages" not in st.session_state.keys():
@@ -186,7 +186,7 @@ elif selected == "Llama2-70b-4096":
                     "content": prompt_input,
                 }
             ],
-            model="Llama2-70b-4096",
+            model="Llama3-8b-8192",
         )
 
         return chat_completion.choices[0].message.content
