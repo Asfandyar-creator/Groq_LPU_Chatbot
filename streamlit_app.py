@@ -150,7 +150,7 @@ elif selected == "Gemma-7b-It":
         message = {"role": "assistant", "content": full_response}
         st.session_state.messages.append(message)
 
-elif selected == "Llama2-70b-4096":
+elif selected == "Llama3-8b-8192":
     st.write("👉Powered by Llama3-8b-8192.")
 
     # Store LLM generated responses
