@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 api_key = os.environ.get("GROQ_API_KEY")
+#api_key = st.secrets["GROQ_API_KEY"]
 
 # App title
 st.set_page_config(page_title="Groq LPU™ Chatbot")
